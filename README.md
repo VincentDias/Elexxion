@@ -3,7 +3,7 @@
 ## 📋 SOMMAIRE
 
 - [INTRODUCTION](#-introduction)  
-- [STRUCTURE DOSSIERS](#-struucture-dossiers)  
+- [STRUCTURE DOSSIERS](#-structure-dossiers)  
 - [DONNÉES UTILISÉES](#-données-utilisées)  
 - [DÉPENDANCES](#-dépendances)  
 
@@ -44,7 +44,7 @@ Les données utilisées proviennent de [www.data.gouv.fr](https://www.data.gouv.
 - [Emploi et chômage](https://www.data.gouv.fr/fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu/)  
 - [Crime](https://www.data.gouv.fr/fr/datasets/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/)  
 
-## ⚙️ DÉPENDANCES
+## 📚 DÉPENDANCES
 
 - Python >= 3.7
 - pandas
