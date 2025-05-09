@@ -13,27 +13,31 @@ Ce projet a pour objectif de nettoyer, transformer et documenter les fichiers de
   - Générer des logs de transformation et des logs des valeurs uniques
 
 - 📂 Structure des dossiers :
-  /content/drive/MyDrive/Elexxion/
-  ├── notebooks/
-  │ └── elexxion-emploi.ipynb
-  ├── emploi/
-  │ ├── datas/
-  │ │ └── FD_csv_EEC23.csv
-  │ └── metadatas/
-  │ └── Varmod_EEC_2023.csv
-  ├── parquets/
-  ├── raw_parquets/
-  ├── currated_parquets/
-  ├── clean_parquets/
--
+
+```bash
+├── emploi/
+│   ├── datas/
+│   │   ├── FD_csv_EEC23.csv
+│   ├── metadatas/
+│   │   ├── Varmod_EEC_2023.csv
+├── notebooks/
+│   ├── elexxion-emploi.ipynb
+├── .gitignore
+├── README.md
+```
 
 ## 📊 Données utilisées
 
-Les données utilisées proviennent de www.data.gouv.fr, "Activité emploi et chômage - enquête emploi en continu"  
+Les données utilisées proviennent de [www.data.gouv.fr](https://www.data.gouv.fr/fr/), "Activité emploi et chômage - enquête emploi en continu"  
 Merci de télécharger les fichiers sources et de les placer dans le dossier approprié :
 
 👉 **Lien vers les données** :  
-`https://www.data.gouv.fr/fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu/`
+
+- [Emploi et chômage](https://www.data.gouv.fr/fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu/)  
+- [Crime](https://www.data.gouv.fr/fr/datasets/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/)  
+
+**Format CSV [Format CSV](https://static.data.gouv.fr/resources/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/20250327-120914/donnee-dep-data.gouv-2024-geographie2024-produit-le2025-03-14.csv)**
+
 
 ## ⚙️ Dépendances
 
