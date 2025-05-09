@@ -15,10 +15,12 @@ Ce projet a pour objectif de nettoyer, transformer et documenter les fichiers de
 - 📂 Structure des dossiers :
 
 ```bash
+├── crime/
+│   ├── data/
 ├── emploi/
-│   ├── datas/
+│   ├── data/
 │   │   ├── FD_csv_EEC23.csv
-│   ├── metadatas/
+│   ├── metadata/
 │   │   ├── Varmod_EEC_2023.csv
 ├── notebooks/
 │   ├── elexxion-emploi.ipynb
