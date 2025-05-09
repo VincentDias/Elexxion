@@ -23,6 +23,7 @@ Ce projet a pour objectif de nettoyer, transformer et documenter les fichiers de
 │   ├── metadata/
 │   │   ├── Varmod_EEC_2023.csv
 ├── notebooks/
+│   ├── elexxion-crime.ipynb
 │   ├── elexxion-emploi.ipynb
 ├── .gitignore
 ├── README.md
