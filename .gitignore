@@ -17,3 +17,5 @@ Thumbs.db
 
 # Ignore les checkpoints de notebooks
 .ipynb_checkpoints/
+
+association/*
