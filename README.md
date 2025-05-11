@@ -21,14 +21,15 @@ Il s’appuie sur des scripts Python exécutés sous Google Colab, permettant de
 ## 📂 STRUCTURE DOSSIERS
 
 ```bash
+├── association/
+│   ├── data/
 ├── crime/
 │   ├── data/
 ├── emploi/
 │   ├── data/
-│   │   ├── FD_csv_EEC23.csv
 │   ├── metadata/
-│   │   ├── Varmod_EEC_2023.csv
 ├── notebooks/
+│   ├── elexxion-association.ipynb
 │   ├── elexxion-crime.ipynb
 │   ├── elexxion-emploi.ipynb
 ├── .gitignore
@@ -41,8 +42,9 @@ Les données utilisées proviennent de [www.data.gouv.fr](https://www.data.gouv.
 
 **Lien vers les données** 👉  
 
-- [Emploi et chômage](https://www.data.gouv.fr/fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu/)  
+- [Association](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/)  
 - [Crime](https://www.data.gouv.fr/fr/datasets/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/)  
+- [Emploi et chômage](https://www.data.gouv.fr/fr/datasets/activite-emploi-et-chomage-enquete-emploi-en-continu/)  
 
 ## 📚 DÉPENDANCES
 
@@ -50,7 +52,6 @@ Les données utilisées proviennent de [www.data.gouv.fr](https://www.data.gouv.
 - pandas
 - numpy
 - pyarrow
-- google.colab (si utilisé sur Colab)
 
 Installez les dépendances si nécessaire :
 
