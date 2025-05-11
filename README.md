@@ -22,9 +22,18 @@ Il s’appuie sur des scripts Python exécutés sous Google Colab, permettant de
 
 ```bash
 ├── association/
-│   ├── data/
+│   ├── parquet/
+│   │   ├── bronze/
+│   │   ├── gold/
+│   │   ├── silver/
+│   ├── raw/
+│   ├── valid/
 ├── crime/
-│   ├── data/
+│   ├── parquet/
+│   │   ├── bronze/
+│   │   ├── gold/
+│   │   ├── silver/
+│   ├── raw/
 ├── emploi/
 │   ├── data/
 │   ├── metadata/
