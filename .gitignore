@@ -1,21 +1,18 @@
-# .gitignore
-
-# Ignore les données
-emploi/datas/
-emploi/metadatas/
-emploi/parquets/
-emploi/raw_parquets/
-emploi/currated_parquets/
-emploi/clean_parquets/
-
+# Config Files
 notebooks/orchestrateur-emploi.ipynb
 content/drive/MyDrive/Elexxion/notebooks/orchestrateur-emploi.ipynb
 
-# Ignore les fichiers système
+# System Files
 .DS_Store
 Thumbs.db
 
-# Ignore les checkpoints de notebooks
+# Notebooks Checkpoints
 .ipynb_checkpoints/
 
-association/*
+# Folders
+association/parquet/*
+association/valid/*
+crime/parquet/*
+dbt/*
+emploi/data/
+emploi/metadata/
