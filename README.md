@@ -31,10 +31,6 @@ Il s’appuie sur des scripts Python permettant de :
 │   ├── raw/
 │   ├── metadata/
 ├── notebooks/
-│   ├── elexxion-association.ipynb
-│   ├── elexxion-crime.ipynb
-│   ├── elexxion-election.ipynb
-│   ├── elexxion-emploi.ipynb
 ├── .gitignore
 ├── README.md
 ```
