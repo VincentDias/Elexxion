@@ -28,7 +28,7 @@ Il s’appuie sur des scripts Python permettant de :
 ├── election/
 │   ├── raw/
 ├── emploi/
-│   ├── data/
+│   ├── raw/
 │   ├── metadata/
 ├── notebooks/
 │   ├── elexxion-association.ipynb
