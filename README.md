@@ -10,7 +10,7 @@
 ## 📦 INTRODUCTION
 
 Ce projet a pour objectif de nettoyer, transformer et documenter les fichiers de l’Enquête Emploi en Continu (EEC) pour l’année 2023, dans le cadre d’un travail de préparation de données pour des analyses statistiques.  
-Il s’appuie sur des scripts Python exécutés sous Google Colab, permettant de :  
+Il s’appuie sur des scripts Python permettant de :  
 
 - Lire et fusionner les fichiers source au format CSV
 - Nettoyer les données en supprimant les colonnes vides ou constantes
@@ -22,17 +22,10 @@ Il s’appuie sur des scripts Python exécutés sous Google Colab, permettant de
 
 ```bash
 ├── association/
-│   ├── parquet/
-│   │   ├── bronze/
-│   │   ├── gold/
-│   │   ├── silver/
 │   ├── raw/
-│   ├── valid/
 ├── crime/
-│   ├── parquet/
-│   │   ├── bronze/
-│   │   ├── gold/
-│   │   ├── silver/
+│   ├── raw/
+├── election/
 │   ├── raw/
 ├── emploi/
 │   ├── data/
@@ -40,6 +33,7 @@ Il s’appuie sur des scripts Python exécutés sous Google Colab, permettant de
 ├── notebooks/
 │   ├── elexxion-association.ipynb
 │   ├── elexxion-crime.ipynb
+│   ├── elexxion-election.ipynb
 │   ├── elexxion-emploi.ipynb
 ├── .gitignore
 ├── README.md
