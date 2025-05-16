@@ -3,3 +3,4 @@ pyspark
 spark
 jupyter
 notebook
+s3fs
