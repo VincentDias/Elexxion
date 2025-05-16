@@ -24,6 +24,7 @@ Il sert de base collaborative pour le partage et la transformation de données e
 │   ├── raw/
 │   ├── metadata/
 ├── notebooks/
+├── scripts/
 ├── .gitignore
 ├── README.md
 ```
