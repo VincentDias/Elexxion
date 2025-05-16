@@ -16,3 +16,5 @@ crime/parquet/*
 dbt/*
 emploi/data/
 emploi/metadata/
+
+.idea/
