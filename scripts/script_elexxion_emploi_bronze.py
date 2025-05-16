@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+# Chargement des variables d'environnement
 MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT")
 MINIO_USER = os.getenv("MINIO_ROOT_USER")
 MINIO_PASSWORD = os.getenv("MINIO_ROOT_PASSWORD")
