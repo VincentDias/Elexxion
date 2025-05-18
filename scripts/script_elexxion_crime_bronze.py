@@ -35,7 +35,7 @@ if not csv_paths:
   raise FileNotFoundError("Aucun fichier crime_2016_2024_departement*.csv trouvé sous raw/crime")
 
 csv_key = csv_paths[0]
-print("CSV détecté :", csv_key)
+print("📚 CSV file detected :", csv_key)
 
 df = pd.read_csv(
   f"s3://{csv_key}",
@@ -54,4 +54,4 @@ df.to_parquet(
   storage_options=storage_opts
 )
 
-print(f" Converti et stocké : s3://{parquet_key}")
+print(f"🧬 Convert in parquet and stocked in s3://{parquet_key}")
