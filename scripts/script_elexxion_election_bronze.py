@@ -33,10 +33,7 @@ print(f"▶️ {len(csv_keys)} fichier(s) CSV trouvé(s) sous {raw_prefix}")
 spark = (
   SparkSession.builder
   .appName("Election Bronze Pipeline")
-  .config(
-    "spark.jars.packages",
-    "org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.12.178"
-  )
+  .config("spark.jars.packages", "org.apache.hadoop:hadoop-aws:3.3.1")
   .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
   .config("spark.hadoop.fs.s3a.access.key", MINIO_USER)
   .config("spark.hadoop.fs.s3a.secret.key", MINIO_PASSWORD)
