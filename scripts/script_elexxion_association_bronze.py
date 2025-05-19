@@ -13,9 +13,6 @@ MINIO_USER = os.getenv("MINIO_ROOT_USER")
 MINIO_PASSWORD = os.getenv("MINIO_ROOT_PASSWORD")
 MINIO_BUCKET = os.getenv("MINIO_BUCKET")
 
-if not all([MINIO_USER, MINIO_PASSWORD, MINIO_BUCKET]):
-  raise RuntimeError("Veuillez définir MINIO_ROOT_USER, MINIO_ROOT_PASSWORD et MINIO_BUCKET dans le .env")
-
 fs = s3fs.S3FileSystem(
   key=MINIO_USER,
   secret=MINIO_PASSWORD,
@@ -30,7 +27,7 @@ storage_opts    = {
   "client_kwargs": {"endpoint_url": f"http://{MINIO_ENDPOINT}"}
 }
 
-# validation
+# Validation
 raw_keys = fs.glob(f"{MINIO_BUCKET}/raw/association/*.csv")
 for key in raw_keys:
   filename = os.path.basename(key)
@@ -48,9 +45,9 @@ for key in raw_keys:
     for l in valid_lines:
       f.write(l + "\n")
 
-# conversion
+# Conversion
 valid_keys = fs.glob(f"{MINIO_BUCKET}/raw/association/valid/*.csv")
-for key in valid_keys:
+for csv_key in valid_keys:
   filename = os.path.basename(key)
   m = re.search(r"rna_import_(\d{8})_dpt_([0-9]{2}|[0-9]{3}|2A|2B|97[1-9][0-9])", filename)
   if not m:
@@ -59,15 +56,24 @@ for key in valid_keys:
   date_str = m.group(1)
   year = date_str[:4]
   dpt = m.group(2)
+
+  print("📚 CSV file detected :", csv_key)
+
+  df = pd.read_csv(
+    f"s3://{csv_key}",
+    sep=delimiter,
+    dtype=str,
+    storage_options=storage_opts
+  )
+
   parquet_key = (
     f"{MINIO_BUCKET}/output/bronze/association/"
     f"df_bronze_association_{year}_dpt_{dpt}.parquet"
   )
+  df.to_parquet(
+    f"s3://{parquet_key}",
+    index=False,
+    storage_options=storage_opts
+  )
 
-  url_in  = f"s3://{key}"
-  url_out = f"s3://{parquet_key}"
-
-  df = pd.read_csv(url_in, sep=delimiter, dtype=str, storage_options=storage_opts)
-  df.to_parquet(url_out, index=False, storage_options=storage_opts)
-
-  print(f"Converti et stocké : {url_out}")
+  print(f"🧬 Convert in parquet and stocked in s3://{parquet_key}")

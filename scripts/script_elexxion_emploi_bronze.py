@@ -26,7 +26,7 @@ storage_opts = {
   "client_kwargs": {"endpoint_url": f"http://{MINIO_ENDPOINT}"}
 }
 
-meta_prefix = f"{MINIO_BUCKET}/metadata/emploi/emploi/metadata"
+meta_prefix = f"{MINIO_BUCKET}/metadata/emploi"
 all_meta = fs.find(meta_prefix)
 meta_files = [p for p in all_meta if p.lower().endswith((".csv", ".json"))]
 print(f" {len(meta_files)} fichier(s) de metadata trouvé(s) sous {meta_prefix}")
