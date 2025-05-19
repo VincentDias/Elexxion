@@ -51,7 +51,7 @@ for key in meta_files:
       storage_options=storage_opts
     )
 
-  out_key = f"{MINIO_BUCKET}/output/bronze/emploi/metadata/{name}.parquet"
+  out_key = f"{MINIO_BUCKET}/output/bronze/emploi/{name}.parquet"
   df.to_parquet(
     f"s3://{out_key}",
     index=False,
