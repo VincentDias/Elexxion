@@ -20,8 +20,8 @@ fs = s3fs.S3FileSystem(
 )
 
 expected_fields = 23
-delimiter       = ";"
-storage_opts    = {
+delimiter = ";"
+storage_opts = {
   "key": MINIO_USER,
   "secret": MINIO_PASSWORD,
   "client_kwargs": {"endpoint_url": f"http://{MINIO_ENDPOINT}"}
@@ -48,7 +48,7 @@ for key in raw_keys:
 # Conversion
 valid_keys = fs.glob(f"{MINIO_BUCKET}/raw/association/valid/*.csv")
 for csv_key in valid_keys:
-  filename = os.path.basename(key)
+  filename = os.path.basename(csv_key)
   m = re.search(r"rna_import_(\d{8})_dpt_([0-9]{2}|[0-9]{3}|2A|2B|97[1-9][0-9])", filename)
   if not m:
     continue
