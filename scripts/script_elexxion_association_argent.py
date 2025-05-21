@@ -35,7 +35,7 @@ print(f" {len(parquet_keys)} fichier(s) Bronze trouvé(s) sous {bronze_prefix}")
 
 for key in parquet_keys:
   fname   = os.path.basename(key)
-  print(f"▶️ Traitement Silver : {fname}")
+  print(f"▶️ Traitement argent : {fname}")
 
   df = pd.read_parquet(f"s3://{key}", storage_options=storage_opts)
 
@@ -66,7 +66,7 @@ for key in parquet_keys:
 
   df = df.drop(columns=[c for c in to_drop if c in df.columns])
 
-  silver_key = key.replace("/output/bronze/association/", "/output/silver/association/") \
+  silver_key = key.replace("/output/bronze/association/", "/output/argent/association/") \
                   .replace("df_bronze", "df_silver")
 
   fs.mkdirs(os.path.dirname(silver_key), exist_ok=True)

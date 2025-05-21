@@ -48,7 +48,7 @@ departement_to_region = {
 }
 valid_dept = set(departement_to_region.keys())
 
-silver_prefix = f"{MINIO_BUCKET}/output/silver/association"
+silver_prefix = f"{MINIO_BUCKET}/output/argent/association"
 all_paths = fs.find(silver_prefix)
 silver_keys = [p for p in all_paths if p.lower().endswith(".parquet")]
 print(f" {len(silver_keys)} fichier(s) Silver trouvé(s) sous {silver_prefix}")
@@ -92,7 +92,7 @@ agg = agg[[
   "cumul_global"
 ]]
 
-gold_key = f"{MINIO_BUCKET}/output/gold/association/df_gold_association_departement.parquet"
+gold_key = f"{MINIO_BUCKET}/output/or/association/df_gold_association_departement.parquet"
 
 fs.mkdirs(os.path.dirname(gold_key), exist_ok=True)
 agg.to_parquet(f"s3://{gold_key}", index=False, storage_options=storage_opts)
