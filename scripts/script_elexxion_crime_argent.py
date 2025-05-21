@@ -48,7 +48,7 @@ df = df.drop(columns=[
   "insee_log_millesime"
 ], errors="ignore")
 
-silver_key = f"{MINIO_BUCKET}/output/silver/crime/df_silver_crime_2016_2024_departement.parquet"
+silver_key = f"{MINIO_BUCKET}/output/argent/crime/df_silver_crime_2016_2024_departement.parquet"
 df.to_parquet(f"s3://{silver_key}", index=False, storage_options=storage_opts)
 
 print(f" Silver Crime généré et stocké : s3://{silver_key}")

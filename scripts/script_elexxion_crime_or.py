@@ -46,7 +46,7 @@ gold_df = (
   .sum()
 )
 
-gold_key = f"{MINIO_BUCKET}/output/gold/crime/df_gold_crime_2016_2024_departement.parquet"
+gold_key = f"{MINIO_BUCKET}/output/or/crime/df_gold_crime_2016_2024_departement.parquet"
 gold_df.to_parquet(f"s3://{gold_key}", index=False, storage_options=storage_opts)
 
 print(f" Gold Crime généré et stocké : s3://{gold_key}")
