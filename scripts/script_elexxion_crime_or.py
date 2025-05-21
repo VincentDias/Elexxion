@@ -26,7 +26,7 @@ storage_opts = {
   "client_kwargs": {"endpoint_url": f"http://{MINIO_ENDPOINT}"}
 }
 
-silver_key = f"{MINIO_BUCKET}/output/silver/crime/df_silver_crime_2016_2024_departement.parquet"
+silver_key = f"{MINIO_BUCKET}/output/argent/crime/df_silver_crime_2016_2024_departement.parquet"
 df = pd.read_parquet(f"s3://{silver_key}", storage_options=storage_opts)
 
 df = df.astype({
